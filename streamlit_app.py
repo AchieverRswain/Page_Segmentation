@@ -73,7 +73,8 @@ if uploaded_file is not None:
 
     with tempfile.NamedTemporaryFile(delete=False, suffix=".png") as temp_file:
         annotated_image_pil.save(temp_file.name)
-        st.download_button("Download Annotated Image", data=open(temp_file.name, "rb"), file_name=“annotated_document.png")
+        st.download_button("Download Annotated Image", data=open(temp_file.name, "rb"), file_name="annotated_document.png")
+
 
 
 
