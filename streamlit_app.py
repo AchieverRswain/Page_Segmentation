@@ -8,6 +8,8 @@ import torch
 import tempfile
 import supervision as sv
 from model_loader import load_model
+import cv2
+
 
 # Step 1: Load the model
 model = load_model()
