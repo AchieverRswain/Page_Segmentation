@@ -5,3 +5,4 @@ numpy
 opencv-python
 torch
 supervision
+opencv-python-headless
