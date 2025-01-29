@@ -8,8 +8,6 @@ import torch
 import tempfile
 import supervision as sv
 from model_loader import load_model
-import cv2
-
 
 # Step 1: Load the model
 model = load_model()
@@ -51,7 +49,7 @@ if uploaded_file is not None:
 
     # Run the model on the image
     st.write("Processing the document...")
-    results = list(model.predict(image))  # Ensure it's a list
+    results = model.predict(image)  # Ensure it's a list or a correct result format
 
     if not results:
         st.error("No detections found!")
@@ -76,9 +74,6 @@ if uploaded_file is not None:
     with tempfile.NamedTemporaryFile(delete=False, suffix=".png") as temp_file:
         annotated_image_pil.save(temp_file.name)
         st.download_button("Download Annotated Image", data=open(temp_file.name, "rb"), file_name="annotated_document.png")
-
-
-
 
 
 
