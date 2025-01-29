@@ -1,0 +1,7 @@
+streamlit
+ultralytics
+pdf2image
+numpy
+opencv-python
+torch
+supervision
